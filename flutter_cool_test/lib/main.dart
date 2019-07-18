@@ -93,7 +93,7 @@ class RandomWordsState extends State<RandomWords> {
           if (pair == "卡顿") {
 
             while (true) {
-              print("111");
+//              print("");
             }
           }
 
