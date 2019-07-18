@@ -18,6 +18,9 @@
 		97C146FC1CF9000F007C117D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FA1CF9000F007C117D /* Main.storyboard */; };
 		97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FD1CF9000F007C117D /* Assets.xcassets */; };
 		97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */; };
+		9C1C29FC22E05B900029E5A6 /* bonreeAgent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1C29FB22E05B900029E5A6 /* bonreeAgent.framework */; };
+		9C1C29FE22E05BBF0029E5A6 /* libresolv.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1C29FD22E05BBF0029E5A6 /* libresolv.9.tbd */; };
+		9C1C2A0022E05BC50029E5A6 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1C29FF22E05BC50029E5A6 /* libc++.tbd */; };
 		E32A3F7BA2935B8BCADB3734 /* Pods_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9D155CBE405E1CD6B0E3168 /* Pods_Runner.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +55,9 @@
 		97C146FD1CF9000F007C117D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97C147001CF9000F007C117D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97C147021CF9000F007C117D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C1C29FB22E05B900029E5A6 /* bonreeAgent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = bonreeAgent.framework; sourceTree = "<group>"; };
+		9C1C29FD22E05BBF0029E5A6 /* libresolv.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.9.tbd; path = usr/lib/libresolv.9.tbd; sourceTree = SDKROOT; };
+		9C1C29FF22E05BC50029E5A6 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		BA1553A328E8EAB39C1ECB9D /* Pods-Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"; sourceTree = "<group>"; };
 		D9D155CBE405E1CD6B0E3168 /* Pods_Runner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F02DF641ED7608B4962430B7 /* Pods-Runner.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.profile.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig"; sourceTree = "<group>"; };
@@ -63,9 +69,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C1C2A0022E05BC50029E5A6 /* libc++.tbd in Frameworks */,
+				9C1C29FE22E05BBF0029E5A6 /* libresolv.9.tbd in Frameworks */,
 				9705A1C61CF904A100538489 /* Flutter.framework in Frameworks */,
 				3B80C3941E831B6300D905FE /* App.framework in Frameworks */,
 				E32A3F7BA2935B8BCADB3734 /* Pods_Runner.framework in Frameworks */,
+				9C1C29FC22E05B900029E5A6 /* bonreeAgent.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +84,7 @@
 		9740EEB11CF90186004384FC /* Flutter */ = {
 			isa = PBXGroup;
 			children = (
+				9C1C29FB22E05B900029E5A6 /* bonreeAgent.framework */,
 				3B80C3931E831B6300D905FE /* App.framework */,
 				3B3967151E833CAA004F5970 /* AppFrameworkInfo.plist */,
 				9740EEBA1CF902C7004384FC /* Flutter.framework */,
@@ -130,6 +140,8 @@
 		9EF26A88F9BA76770B92766F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9C1C29FF22E05BC50029E5A6 /* libc++.tbd */,
+				9C1C29FD22E05BBF0029E5A6 /* libresolv.9.tbd */,
 				D9D155CBE405E1CD6B0E3168 /* Pods_Runner.framework */,
 			);
 			name = Frameworks;
@@ -142,7 +154,6 @@
 				BA1553A328E8EAB39C1ECB9D /* Pods-Runner.release.xcconfig */,
 				F02DF641ED7608B4962430B7 /* Pods-Runner.profile.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -380,12 +391,21 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Flutter\"",
+					"-framework",
+					"\"flutter_webview_plugin\"",
+					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bonree.flutterCoolTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -513,12 +533,21 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Flutter\"",
+					"-framework",
+					"\"flutter_webview_plugin\"",
+					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bonree.flutterCoolTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -541,12 +570,21 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Runner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Flutter",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Flutter\"",
+					"-framework",
+					"\"flutter_webview_plugin\"",
+					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bonree.flutterCoolTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
